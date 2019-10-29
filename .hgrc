@@ -1,0 +1,2 @@
+[extensions]
+  prompt = ~/.oh-my-zsh/hg-prompt/prompt.py

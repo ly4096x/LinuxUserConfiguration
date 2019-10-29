@@ -1,0 +1,5 @@
+[push]
+	default = simple
+[color]
+	diff = auto
+	status = auto
