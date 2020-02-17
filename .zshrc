@@ -2,9 +2,11 @@
 export PATH=$HOME/.local/bin:$PATH
 
 # For WSL
-export SHELL=/bin/zsh
-export DISPLAY=127.0.0.1:0.0
-umask 022
+if [[ "$WSL_DISTRO_NAME" != "" ]]; then
+    export SHELL=/bin/zsh
+    export DISPLAY=127.0.0.1:0.0
+    umask 022
+fi
 
 alias tmux='tmux -2'
 ZSH_COMPDUMP=$HOME/.cache/zsh/zcompdump
@@ -50,7 +52,9 @@ COMPLETION_WAITING_DOTS="true"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-HIST_STAMPS="yyyy/mm/dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+HIST_STAMPS="%Y/%m/%d"
 
 # Would you like to use another custom folder than $ZSH/custom?
 #ZSH_CUSTOM=$HOME/.oh_my_zsh_custom
@@ -59,7 +63,7 @@ HIST_STAMPS="yyyy/mm/dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo colored-man-pages colorize encode64 history-substring-search docker systemd yum ubuntu)
+plugins=(git sudo colored-man-pages colorize encode64 history-substring-search docker systemd ubuntu)
 
 source $ZSH/oh-my-zsh.sh
 
