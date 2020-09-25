@@ -24,7 +24,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'vim-scripts/a.vim'
+"Plugin 'vim-scripts/a.vim'
 Plugin 'davidhalter/jedi-vim'
 "Plugin 'Valloric/YouCompleteMe'
 
@@ -82,10 +82,13 @@ set softtabstop=4
 set expandtab
 set autoindent
 set smartindent
+set ttimeoutlen=0
 
 syntax on
 
 set mouse=a
+
+let g:lightline = {'active': {'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ]}}
 
 " We need this for plugins like Syntastic and vim-gitgutter which put symbols
 " in the sign column.
