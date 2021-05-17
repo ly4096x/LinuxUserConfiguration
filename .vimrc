@@ -46,7 +46,7 @@ Plugin 'kchmck/vim-coffee-script'
 
 " ---- Extras/Advanced plugins ----------------------------------------
 " Highlight and strip trailing whitespace
-Plugin 'ntpeters/vim-better-whitespace'
+"Plugin 'ntpeters/vim-better-whitespace'
 " Easily surround chunks of text
 "Plugin 'tpope/vim-surround'
 " Align CSV files at commas, align Markdown tables, and more
