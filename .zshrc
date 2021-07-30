@@ -4,8 +4,13 @@ export PATH=$HOME/.local/bin:$PATH
 # For WSL
 if [[ "$WSL_DISTRO_NAME" != "" ]]; then
     export SHELL=/bin/zsh
-    export DISPLAY=127.0.0.1:0.0
     umask 022
+    
+    if uname -r |grep WSL2 ; then
+        export DISPLAY=$WSL_HOST_IP:0.0
+    else
+        export DISPLAY=127.0.0.1:0.0
+    fi
 fi
 
 alias tmux='tmux -2'
@@ -54,7 +59,7 @@ COMPLETION_WAITING_DOTS="true"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-HIST_STAMPS="%Y/%m/%d"
+HIST_STAMPS="%Y/%m/%d %H:%m:%S"
 
 # Would you like to use another custom folder than $ZSH/custom?
 #ZSH_CUSTOM=$HOME/.oh_my_zsh_custom
@@ -95,3 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+if uname -r |grep WSL2 ; then
+    echo WSL_GUEST_IP=$WSL_GUEST_IP
+fi
