@@ -1,5 +1,13 @@
 #!/bin/zsh
-set -ev
+set -e
+
+REQUIRED_EXE='node yarn curl git'
+for x in $REQUIRED_EXE ; do
+    if ! command -v $x ; then
+        echo Require: $REQUIRED_EXE, and vim or neovim.
+        exit
+    fi
+done
 
 mkdir -p .cache/zsh
 git clone https://github.com/robbyrussell/oh-my-zsh .oh-my-zsh
