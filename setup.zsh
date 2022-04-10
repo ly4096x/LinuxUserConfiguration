@@ -19,7 +19,7 @@ chmod +x ~/.local/bin/dockertools
 
 curl -Lo .local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mkdir -p ~/.vim/autoload/
-ln -s ../../.local/share/nvim/site/autoload/plug.vim) ~/.vim/autoload/
+ln -s ../../.local/share/nvim/site/autoload/plug.vim ~/.vim/autoload/
 if ! command -v nvim &> /dev/null ; then
     vim +PlugUpdate +qall
 else
