@@ -24,5 +24,5 @@ if ! command -v nvim &> /dev/null ; then
     vim +PlugUpdate +qall
 else
     nvim +PlugUpdate +qall
-    nvim "+CocInstall coc-git coc-pyright coc-json" +qall
+    nvim "+CocInstall coc-git coc-pyright coc-json" # this can't use +qall
 fi
