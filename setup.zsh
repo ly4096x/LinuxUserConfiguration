@@ -23,5 +23,6 @@ ln -s ../../.local/share/nvim/site/autoload/plug.vim) ~/.vim/autoload/
 if ! command -v nvim &> /dev/null ; then
     vim +PlugUpdate +qall
 else
-    nvim +PlugUpdate "+CocInstall coc-git coc-pyright coc-json" +qall
+    nvim +PlugUpdate +qall
+    nvim "+CocInstall coc-git coc-pyright coc-json" +qall
 fi
