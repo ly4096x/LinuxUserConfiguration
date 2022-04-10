@@ -68,7 +68,7 @@ HIST_STAMPS="%Y/%m/%d %H:%m:%S"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo colored-man-pages colorize encode64 history-substring-search docker systemd ubuntu)
+plugins=(git sudo colored-man-pages colorize encode64 history-substring-search docker systemd ubuntu dnf brew)
 
 source $ZSH/oh-my-zsh.sh
 

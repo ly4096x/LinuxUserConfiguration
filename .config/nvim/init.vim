@@ -21,6 +21,7 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
 Plug 'majutsushi/tagbar'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 
 " ----- Working with Git ----------------------------------------------
 Plug 'airblade/vim-gitgutter'
