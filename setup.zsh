@@ -12,7 +12,6 @@ done
 mkdir -p .cache/zsh
 git clone https://github.com/robbyrussell/oh-my-zsh .oh-my-zsh
 cp -r .oh_my_zsh_custom/* .oh-my-zsh/custom/
-rm -rf setup.bash .git .oh_my_zsh_custom
 
 curl -Lo ~/.local/bin/dockertools --create-dirs https://github.com/ly4096x/dockertools/raw/master/dockertools
 chmod +x ~/.local/bin/dockertools
@@ -26,3 +25,5 @@ else
     nvim +PlugUpdate +qall
     nvim "+CocInstall coc-git coc-pyright coc-json" # this can't use +qall
 fi
+
+rm -rf setup.zsh .git .oh_my_zsh_custom
