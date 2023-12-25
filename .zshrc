@@ -1,5 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.cargo/bin:/opt/homebrew/bin:$PATH
+
+export GOPATH=$HOME/.local/go
+export GOCACHE=$HOME/.cache/go
 
 # For WSL
 if [[ "$WSL_DISTRO_NAME" != "" ]]; then
@@ -81,6 +84,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='nvim'
    export EDITOR='vim'
 # else
 #   export EDITOR='mvim'

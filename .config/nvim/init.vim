@@ -144,3 +144,6 @@ augroup END
 " ----- jez/vim-superman settings -----
 " better man page support
 noremap K :SuperMan <cword><CR>
+
+" ------- CoC settings -------
+inoremap <silent><expr> <Tab> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<Tab>"
