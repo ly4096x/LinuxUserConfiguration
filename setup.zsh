@@ -12,6 +12,7 @@ done
 mkdir -p .cache/zsh
 git clone https://github.com/robbyrussell/oh-my-zsh .oh-my-zsh
 cp -r .oh_my_zsh_custom/* .oh-my-zsh/custom/
+git clone --depth 1 https://github.com/marlonrichert/zsh-autocomplete.git .oh-my-zsh/custom/plugins/zsh-autocomplete
 
 curl -Lo ~/.local/bin/dockertools --create-dirs https://github.com/ly4096x/dockertools/raw/master/dockertools
 chmod +x ~/.local/bin/dockertools
