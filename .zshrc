@@ -71,7 +71,7 @@ HIST_STAMPS="%Y/%m/%d %H:%m:%S"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo colored-man-pages colorize encode64 history-substring-search docker systemd ubuntu dnf brew)
+plugins=(git sudo colored-man-pages colorize encode64 zsh-autocomplete docker systemd ubuntu dnf brew)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,7 +85,6 @@ source $ZSH/oh-my-zsh.sh
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='nvim'
-   export EDITOR='vim'
 # else
 #   export EDITOR='mvim'
 # fi
@@ -108,3 +107,9 @@ source $ZSH/oh-my-zsh.sh
 if uname -r |grep WSL2 ; then
     echo WSL_GUEST_IP=$WSL_GUEST_IP
 fi
+
+# zsh-autocomplete
+bindkey              '^I' menu-select
+bindkey "$terminfo[kcbt]" menu-select
+bindkey -M menuselect              '^I'         menu-complete
+bindkey -M menuselect "$terminfo[kcbt]" reverse-menu-complete
